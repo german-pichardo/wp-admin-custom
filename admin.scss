@@ -1,0 +1,104 @@
+@function set-color-inverse($color) {
+	@if (lightness( $color ) >= 55) {
+		@return darken($color, 40%)
+	}
+	@else {
+		@return lighten($color, 40%)
+	}
+}
+
+@function set-color-base($color) {
+	@if (lightness( $color ) < 35) {
+		@return darken($color, 10%)
+	}
+	@else {
+		@return darken($color, 18%)
+	}
+}
+
+// Theme variables
+$wp-admin-primary: 							#090C06 !default;
+$wp-admin-secondary: 						#F9C13D !default;
+$wp-admin-tertiary: 						#e5ecf5 !default;
+
+$wp-admin-primary-inverse: 			set-color-inverse($wp-admin-primary);
+$wp-admin-secondary-inverse: 		set-color-inverse($wp-admin-secondary);
+
+// Core variables
+$base-color: 									set-color-base($wp-admin-primary);
+$text-color: 									lighten(set-color-inverse($base-color), 20%);
+$icon-color: 									$text-color;
+$highlight-color: 						set-color-inverse($text-color);
+$notification-color: 					set-color-inverse($wp-admin-secondary);
+
+$body-background: 						mix(mix($wp-admin-primary-inverse, $wp-admin-secondary-inverse, 50%),#ffffff,10%);
+
+$link: 												mix(lighten($wp-admin-primary, 15), #2DAED1, 10);
+$link-focus: 									darken($notification-color, 10%);
+
+$button-color: 								$wp-admin-secondary;
+$form-checked: 								darken($wp-admin-secondary-inverse, 14);
+
+$list-border-color: 					darken($base-color, 3%);
+
+// Hover - Active sidebar
+$menu-icon: 									rgba($icon-color,0.5);
+
+$menu-highlight-text: 				$wp-admin-secondary-inverse;
+$menu-highlight-icon: 				$wp-admin-secondary-inverse;
+$menu-highlight-background: 	$wp-admin-secondary;
+
+$menu-current-text: 					$wp-admin-secondary-inverse; // Active color
+
+$menu-bubble-text: 						set-color-inverse($menu-highlight-background);
+$menu-bubble-background: 			darken($menu-highlight-background, 3%);
+
+$menu-submenu-focus-text: 		mix($wp-admin-secondary-inverse, $wp-admin-primary-inverse);
+
+
+// Include parent source files
+@import '~wp-admin-colors/dist/admin';
+
+.wp-admin body {
+	color:       $base-color;
+	font-weight: 400;
+	h1, h2, h3 {
+		color: $base-color;
+	}
+}
+
+#adminmenu li.menu-top {
+	border-top: 1px solid $list-border-color;
+}
+
+#wpadminbar {
+	border-bottom: 1px solid $list-border-color;
+	ul#wp-admin-bar-root-default > li {
+		border-right: 1px solid $list-border-color;
+	}
+}
+
+.wp-core-ui .button-primary {
+	border: 0;
+}
+
+/* Admin Menu: bubble */
+
+#adminmenu {
+	.awaiting-mod,
+	.update-plugins {
+		color:      $menu-bubble-text;
+		background: $menu-bubble-background;
+	}
+}
+
+.wrap .add-new-h2:hover, /* deprecated */
+.wrap .page-title-action:hover,
+.tablenav .tablenav-pages a:hover,
+.tablenav .tablenav-pages a:focus {
+	border-color: $menu-background;
+}
+
+input[type=checkbox]:checked:before {
+	color: $form-checked;
+}
