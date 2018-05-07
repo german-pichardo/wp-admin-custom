@@ -11,7 +11,7 @@
 		"gulp-download": "*"
 	},
 	"scripts": {
-		"start": ".bin/gulp"
+		"start": "node_modules/.bin/gulp"
 	},
 	"tags": [
 		"wordpress",
