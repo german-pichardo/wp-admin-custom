@@ -17,7 +17,6 @@ $ npm install wp-admin-custom --save
 // Overwrite variables
 $wp-admin-primary:    #090C06;
 $wp-admin-secondary:  #F9C13D;
-$wp-admin-tertiary:   #e5ecf5;
 ```
 
 ## Author
