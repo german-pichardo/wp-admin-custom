@@ -1,25 +1,25 @@
 {
-	"name": "wp-admin-custom",
-	"version": "4.9.5",
-	"description": "Custom wp-admin ",
-	"author": {
-		"name": "German Pichardo",
-		"url": "http://german-pichardo.com/"
-	},
-	"dependencies": {
-		"gulp": "^3.9.1",
-		"gulp-download": "*"
-	},
-	"scripts": {
-		"start": "node_modules/.bin/gulp"
-	},
-	"tags": [
-		"wordpress",
-		"scss",
-		"wp-admin"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/german-pichardo/wp-admin-custom.git"
-	}
+  "name": "wp-admin-custom",
+  "version": "4.9.5",
+  "description": "Custom wp-admin ",
+  "author": {
+    "name": "German Pichardo",
+    "url": "http://german-pichardo.com/"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-download": "*"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/gulp"
+  },
+  "tags": [
+    "wordpress",
+    "scss",
+    "wp-admin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/german-pichardo/wp-admin-custom.git"
+  }
 }
