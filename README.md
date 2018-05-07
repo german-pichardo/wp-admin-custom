@@ -8,16 +8,16 @@ $ npm install wp-admin-custom --save
 ```
 
 ## Use 
-`/your-file.scss `
+`/your-admin-file.scss `
 
 ```scss
 @import 'node_modules/wp-admin-colors/admin';
 // @import '~wp-admin-custom/scs/admin';
 
 // Overwrite variables
-$wp-admin-primary: 							#090C06;
-$wp-admin-secondary: 						#F9C13D;
-$wp-admin-tertiary: 						#e5ecf5;
+$wp-admin-primary:    #090C06;
+$wp-admin-secondary:  #F9C13D;
+$wp-admin-tertiary:   #e5ecf5;
 ```
 
 ## Author
