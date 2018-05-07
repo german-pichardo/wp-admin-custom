@@ -1,6 +1,6 @@
 # wp-admin-custom
 
-Custom colors for wp-admin 
+Build custom wordpress admin panel based on 2 color variables
 
 ## Install
 ```sh
@@ -11,7 +11,7 @@ $ npm install wp-admin-custom --save
 `/your-admin-file.scss `
 
 ```scss
-@import 'node_modules/wp-admin-colors/admin';
+@import 'node_modules/wp-admin-custom/admin';
 // @import '~wp-admin-custom/scs/admin';
 
 // Overwrite variables
