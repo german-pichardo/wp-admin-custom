@@ -26,3 +26,5 @@ $wp-admin-tertiary:   #e5ecf5;
 
 * [github/german-pichardo](https://github.com/german-pichardo)
 * [http://german-pichardo.com](http://german-pichardo.com)
+
+![Alt Text](https://raw.githubusercontent.com/german-pichardo/wp-admin-custom/master/screenshot.gif)
