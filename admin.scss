@@ -17,47 +17,47 @@
 }
 
 // Theme variables
-$wp-admin-primary: 							#090C06 !default;
-$wp-admin-secondary: 						#F9C13D !default;
-$wp-admin-tertiary: 						#e5ecf5 !default;
+$wp-admin-primary: 					#090C06 !default;
+$wp-admin-secondary: 				#F9C13D !default;
+// $wp-admin-tertiary: 				#e5ecf5 !default;
 
 $wp-admin-primary-inverse: 			set-color-inverse($wp-admin-primary);
 $wp-admin-secondary-inverse: 		set-color-inverse($wp-admin-secondary);
 
 // Core variables
-$base-color: 									set-color-base($wp-admin-primary);
-$text-color: 									lighten(set-color-inverse($base-color), 20%);
-$icon-color: 									$text-color;
-$highlight-color: 						set-color-inverse($text-color);
-$notification-color: 					set-color-inverse($wp-admin-secondary);
+$base-color: 						set-color-base($wp-admin-primary);
+$text-color: 						lighten(set-color-inverse($base-color), 20%);
+$icon-color: 						$text-color;
+$highlight-color: 					set-color-inverse($text-color);
+$notification-color: 				set-color-inverse($wp-admin-secondary);
 
-$body-background: 						mix(mix($wp-admin-primary-inverse, $wp-admin-secondary-inverse, 50%),#ffffff,10%);
+$body-background: 					mix(mix($wp-admin-primary-inverse, $wp-admin-secondary-inverse, 50%),#ffffff,10%);
 
-$link: 												mix(lighten($wp-admin-primary, 15), #2DAED1, 10);
-$link-focus: 									darken($notification-color, 10%);
+$link: 								mix(lighten($wp-admin-primary, 15), #2DAED1, 10);
+$link-focus: 						darken($notification-color, 10%);
 
-$button-color: 								$wp-admin-secondary;
-$form-checked: 								darken($wp-admin-secondary-inverse, 14);
+$button-color: 						$wp-admin-secondary;
+$form-checked: 						darken($wp-admin-secondary-inverse, 14);
 
-$list-border-color: 					darken($base-color, 3%);
+$list-border-color: 				darken($base-color, 3%);
 
 // Hover - Active sidebar
-$menu-icon: 									rgba($icon-color,0.5);
+$menu-icon: 						rgba($icon-color,0.5);
 
 $menu-highlight-text: 				$wp-admin-secondary-inverse;
 $menu-highlight-icon: 				$wp-admin-secondary-inverse;
-$menu-highlight-background: 	$wp-admin-secondary;
+$menu-highlight-background: 		$wp-admin-secondary;
 
-$menu-current-text: 					$wp-admin-secondary-inverse; // Active color
+$menu-current-text: 				$wp-admin-secondary-inverse; // Active color
 
-$menu-bubble-text: 						set-color-inverse($menu-highlight-background);
+$menu-bubble-text: 					set-color-inverse($menu-highlight-background);
 $menu-bubble-background: 			darken($menu-highlight-background, 3%);
 
-$menu-submenu-focus-text: 		mix($wp-admin-secondary-inverse, $wp-admin-primary-inverse);
+$menu-submenu-focus-text: 			mix($wp-admin-secondary-inverse, $wp-admin-primary-inverse);
 
 
-// Include parent source files
-@import '~wp-admin-colors/dist/admin';
+// Include source admin
+@import './src/admin';
 
 .wp-admin body {
 	color:       $base-color;
