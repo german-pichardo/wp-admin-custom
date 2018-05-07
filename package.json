@@ -11,9 +11,9 @@
     "gulp-download": "*"
   },
   "scripts": {
-    "start": "node_modules/.bin/gulp"
+    "start": ".bin/gulp"
   },
-  "tags": [
+  "keywords": [
     "wordpress",
     "scss",
     "wp-admin"
