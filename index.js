@@ -1,14 +1,11 @@
 var gulp = require('gulp');
 var download = require('gulp-download');
-// var packageJSON = require('./package.json');
-// TODO remove
-var packageJSON = {
-    'version': '4.9.5'
-};
+var packageJSON = require('./package.json');
+
 var source = [
 	'http://core.svn.wordpress.org/tags/' + packageJSON.version + '/wp-admin/css/colors/_admin.scss',
 	'http://core.svn.wordpress.org/tags/' + packageJSON.version + '/wp-admin/css/colors/_variables.scss',
-	'http://core.svn.wordpress.org/tags/' + packageJSON.version + '/wp-admin/css/colors/_mixins.scss',
+	'http://core.svn.wordpress.org/tags/' + packageJSON.version + '/wp-admin/css/colors/_mixins.scss'
 ];
 
 function downloadSource () {

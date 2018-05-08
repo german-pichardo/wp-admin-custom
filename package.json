@@ -1,6 +1,6 @@
 {
   "name": "wp-admin-custom",
-  "version": "0.0.3",
+  "version": "4.9.5",
   "description": "Build custom wordpress admin panel based on 2 color variables",
   "author": {
     "name": "German Pichardo",
