@@ -21,11 +21,12 @@
 
 // Theme variables
 $wp-admin-primary: 					#090C06 !default;
-$wp-admin-secondary: 				if(variable-exists(wp-admin-secondary),$wp-admin-secondary,mix(mix($wp-admin-primary,invert($wp-admin-primary),90%),complement($wp-admin-primary),80%));
-// $wp-admin-tertiary: 				#e5ecf5 !default;
+$wp-admin-secondary: 				if(variable-exists(wp-admin-secondary),$wp-admin-secondary,mix(mix($wp-admin-primary,invert($wp-admin-primary),90%),complement($wp-admin-primary),80%)) !default;
+$wp-admin-tertiary: 				false !default;
 
 $wp-admin-primary-inverse: 			set-color-inverse($wp-admin-primary);
 $wp-admin-secondary-inverse: 		set-color-inverse($wp-admin-secondary);
+$wp-admin-tertiary-inverse: 		if($wp-admin-tertiary,set-color-inverse($wp-admin-tertiary),false);
 
 // Core variables
 $base-color: 						set-color-base($wp-admin-primary);
@@ -53,10 +54,10 @@ $menu-highlight-background: 		$wp-admin-secondary;
 
 $menu-current-text: 				$wp-admin-secondary-inverse; // Active color
 
-$menu-bubble-text: 					set-color-inverse($menu-highlight-background);
-$menu-bubble-background: 			darken($menu-highlight-background, 3%);
+$menu-bubble-text: 					set-color-inverse(if($wp-admin-tertiary,$wp-admin-tertiary,$menu-highlight-background));
+$menu-bubble-background: 			darken(if($wp-admin-tertiary,$wp-admin-tertiary,$menu-highlight-background), 3%);
 
-$menu-submenu-focus-text: 			mix($wp-admin-secondary-inverse, $wp-admin-primary-inverse);
+$menu-submenu-focus-text: 			if($wp-admin-tertiary,mix($wp-admin-tertiary-inverse,mix($wp-admin-secondary-inverse, $wp-admin-primary-inverse),33),mix($wp-admin-secondary-inverse, $wp-admin-primary-inverse))	;
 
 
 // Include source admin
