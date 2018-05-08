@@ -21,7 +21,7 @@
 
 // Theme variables
 $wp-admin-primary: 					#090C06 !default;
-$wp-admin-secondary: 				#F9C13D !default;
+$wp-admin-secondary: 				if(variable-exists(wp-admin-secondary),$wp-admin-secondary,mix(mix($wp-admin-primary,invert($wp-admin-primary),90%),complement($wp-admin-primary),80%));
 // $wp-admin-tertiary: 				#e5ecf5 !default;
 
 $wp-admin-primary-inverse: 			set-color-inverse($wp-admin-primary);
