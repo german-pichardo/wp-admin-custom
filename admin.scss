@@ -1,9 +1,12 @@
 @function set-color-inverse($color) {
-	@if (lightness( $color ) >= 55) {
-		@return darken($color, 40%)
+	@if (lightness( $color ) > 55) {
+		@return darken($color, 47%)
 	}
-	@else {
-		@return lighten($color, 40%)
+	@else if (lightness($color) < 55) and (lightness($color) > 25) {
+		@return lighten($color, 42%)
+	}
+	@else if (lightness($color) < 25) {
+		@return lighten($color, 75%)
 	}
 }
 
