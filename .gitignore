@@ -2,6 +2,7 @@
 #     PhpStorm and Editors     #
 #==============================#
 /.idea/
+.idea/
 *.sublime-project
 *.sublime-workspace
 *.komodoproject

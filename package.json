@@ -1,17 +1,17 @@
 {
   "name": "wp-admin-custom",
   "version": "4.9.5",
-  "description": "Custom wp-admin ",
+  "description": "Build custom wordpress admin panel based on 2 color variables",
   "author": {
     "name": "German Pichardo",
     "url": "http://german-pichardo.com/"
   },
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-download": "*"
+    "gulp-download": "^0.0.1"
   },
   "scripts": {
-    "start": ".bin/gulp"
+    "start": "node index.js"
   },
   "keywords": [
     "wordpress",
