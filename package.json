@@ -1,7 +1,7 @@
 {
   "name": "wp-admin-custom",
   "version": "4.9.5",
-  "description": "Build custom wordpress admin panel based on 2 color variables",
+  "description": "Generates custom wordpress admin color palette from one up to 3 colors.",
   "author": {
     "name": "German Pichardo",
     "url": "http://german-pichardo.com/"
@@ -21,5 +21,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/german-pichardo/wp-admin-custom.git"
-  }
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
 }
