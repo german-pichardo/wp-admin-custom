@@ -1,6 +1,6 @@
 # wp-admin-custom
 
-Build custom wordpress admin panel based on 2 color variables
+Generates custom wordpress admin color palette from one up to 3 colors.
 
 ## Install
 ```sh
@@ -8,26 +8,27 @@ $ npm install wp-admin-custom --save
 ```
 
 ## Use 
-`/admin-custom.scss `
-or name it as you wish
+`/admin-custom.scss ` or name it as you wish
 ```scss
-// Overwrite variables
-$wp-admin-primary:    #090C06;
-$wp-admin-secondary:  #F9C13D;
+// It overwrites the default primary color variable. 
+// It will generate a monochromatic palette based on this color.
+$wp-admin-primary:    #075FB3;
+
+// Optional variables to create a multi color palette
+$wp-admin-secondary:  #AE4450;
+$wp-admin-tertiary:   #FFC008;
+
+// Overwrite source variable
+// `$link`: blue;
 
 // @import '~wp-admin-custom/admin';
 @import 'node_modules/wp-admin-custom/admin';
-```
 
-## Use 
-```scss
-// why not a simple monochromatic palette?
-$wp-admin-primary:    #AE2420;
-$wp-admin-secondary:  mix(mix($wp-admin-primary,invert($wp-admin-primary),90%),complement($wp-admin-primary),80%) ;
+// Overwrite source classes
+...
 ```
-
+ 
 ![Alt Text](https://raw.githubusercontent.com/german-pichardo/wp-admin-custom/master/screenshot.gif)
-
 
 ## Author
 
