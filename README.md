@@ -18,10 +18,14 @@ $wp-admin-primary:    #075FB3;
 $wp-admin-secondary:  #AE4450;
 $wp-admin-tertiary:   #FFC008;
 
-// You can still overwrite any of wp-admin source variables and classes as you wish
+// Overwrite source variable
+// `$link`: blue;
 
 // @import '~wp-admin-custom/admin';
 @import 'node_modules/wp-admin-custom/admin';
+
+// Overwrite source classes
+...
 ```
  
 ![Alt Text](https://raw.githubusercontent.com/german-pichardo/wp-admin-custom/master/screenshot.gif)
