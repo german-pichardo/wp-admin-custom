@@ -1,6 +1,6 @@
 {
   "name": "wp-admin-custom",
-  "version": "4.9.5",
+  "version": "4.9.6",
   "description": "Generates custom wordpress admin color palette from one up to 3 colors.",
   "author": {
     "name": "German Pichardo",
@@ -10,14 +10,14 @@
     "gulp": "^3.9.1",
     "gulp-download": "^0.0.1"
   },
-  "scripts": {
-    "start": "node index.js"
-  },
   "keywords": [
     "wordpress",
     "scss",
     "wp-admin"
   ],
+  "scripts": {
+    "start": "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/german-pichardo/wp-admin-custom.git"
