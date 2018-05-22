@@ -1,4 +1,4 @@
-# wp-admin-custom
+# wp-admin-custom 4.9.6
 
 Generates custom wordpress admin color palette from one up to 3 colors.
 
